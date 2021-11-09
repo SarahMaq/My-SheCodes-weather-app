@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e28d7cb6c0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="scr/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body card-fill">
+                
+                <div class="row">
+                    <div class="col-8 search-form">
+                            <form class="search-box">
+                              <input type="text" placeholder="Search.." name="search" class="search-bar" id="search">
+                              <button type="submit" class="search-btn"><i class="fa fa-search search-icon"></i></button>
+                            </form>
+                    </div>
+                    <div class="col-4">
+                        <input class="btn btn-primary current" type="button" value="Current City"/>
+                    </div>
+                </div>
+                <div class="row degree">
+                    <div class="col-10"><h2 class="city-name" id="city-name">city name</h2></div>
+                    <div class="col-2">
+                        <div class="btn-group-vertical">
+                            <button type="button" class="btn btn-outline-primary system-button degF" id="fahrenheit">°F</button>
+                            <button type="button" class="btn btn-outline-primary system-button degC" id="celsius">°C</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="sun-background">
+                    <h1 class="weather">20°</h1>
+                    <div class="today">                   
+                        <h3 class="time" id="time">20:35</h3>
+                        <h3 class="day" id="day">Saturday</h3>
+                        <h3 class="date" id="date">9/13/2021</h3>
+                    </div>
+                </div>
+                        
+                        <div class="row next-days">
+                            <div class="col center-it">
+                                <div class="week-day01">
+                                    Sun
+                                </div>
+                                <div class="icon01"><i class="fas fa-sun sunny"></i>
+                                    <div class="temp01">30°</div>
+                                </div>
+                            </div>
+                            <div class="col center-it"><div class="week-day02">
+                                Mon
+                            </div>
+                            <div class="icon02"><i class="fas fa-sun sunny"></i>
+                                <div class="temp02">31°</div>
+                            </div>
+                        </div>
+                        <div class="col center-it"><div class="week-day03">
+                            Tue
+                        </div>
+                        <div class="icon03"><i class="fas fa-sun sunny"></i>
+                            <div class="temp03">29°</div>
+                </div>
+            </div>
+            <div class="col center-it"><div class="week-day04">
+                Wed
+            </div>
+            <div class="icon04"><i class="fas fa-sun sunny"></i>
+                <div class="temp04">30°</div>
+            </div>
+        </div>
+        <div class="col center-it"><div class="week-day05">
+            Thu
+        </div>
+        <div class="icon05"><i class="fas fa-sun sunny"></i>
+            <div class="temp05">30°</div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+<script src="scr/script.js"></script>
+</body>
+</html>

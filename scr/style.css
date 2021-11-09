@@ -1,0 +1,82 @@
+
+h1{
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    padding-left: 30px;
+}
+h2{
+    color: #82DCFF;
+    margin-top: 15px;
+}
+
+h3{
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    opacity: 80%;
+    text-shadow: #F2E8DF 1px 0 10px;
+}
+.card-fill{
+    background: linear-gradient(#ffffff, #82DCFF);
+}
+.search-icon{
+    color: white;
+}
+.search-btn{
+    background: #82DCFF;
+    border-color: #82DCFF;
+    border-style: solid;
+    border-radius: 4px;
+}
+.search-bar{
+    border: 1px solid #82DCFF;
+}
+.next-days{
+    color: white;
+}
+.sunny{
+    color: #fffc5b;
+    text-shadow: #F2E8DF 1px 1px 10px;;
+}
+.current{
+    background: #82DCFF;
+    border-color: #82DCFF;
+    font-weight: bold;
+    color: #f1fbff;
+}
+.container{
+    max-width: 500px;
+}
+.today{
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+.degree{
+    margin-top: 5px;
+}
+.sun-background{
+    background-image: url(https://drive.google.com/thumbnail?id=1lw8DNvMlj9rAfhSNz2yk4-5h4FZI6x7m);
+    background-size: cover;
+    background-position-y: center;
+}
+.center-it{
+    text-align: center;
+}
+.system-button{
+    border-color: white;
+    color: white;
+    font-size: 14px;
+}
+.search-form{
+    padding-top: 6px;
+}
+.degC, .degF{
+    color: #82DCFF;
+    border-color: #82DCFF;
+
+}
+.degF:hover,.degC:hover{
+    background-color: #82DCFF;
+    border-color: #82DCFF;
+}
