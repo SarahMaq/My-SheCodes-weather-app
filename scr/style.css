@@ -1,12 +1,12 @@
 
 h1{
     font-size: 100px;
-    color: white;
+    color: #ffffff;
     text-align: center;
     padding-left: 30px;
 }
 h2{
-    color: #82DCFF;
+    color: #ffffff;
     margin-top: 15px;
 }
 
@@ -18,19 +18,19 @@ h3{
     text-shadow: #F2E8DF 1px 0 10px;
 }
 .card-fill{
-    background: linear-gradient(#ffffff, #82DCFF);
+    background: linear-gradient(#D9C9BA, #8C6151);
 }
 .search-icon{
-    color: white;
+    color: #D9C9BA;
 }
 .search-btn{
-    background: #82DCFF;
-    border-color: #82DCFF;
+    background: #ffffff;
+    border-color: #ffffff;
     border-style: solid;
     border-radius: 4px;
 }
 .search-bar{
-    border: 1px solid #82DCFF;
+    border: 1px solid #ffffff;
 }
 .next-days{
     color: white;
@@ -40,10 +40,10 @@ h3{
     text-shadow: #F2E8DF 1px 1px 10px;;
 }
 .current{
-    background: #82DCFF;
-    border-color: #82DCFF;
+    background: #ffffff;
+    border-color: #ffffff;
     font-weight: bold;
-    color: #f1fbff;
+    color: #D9C9BA;
 }
 .container{
     max-width: 500px;
@@ -56,9 +56,10 @@ h3{
     margin-top: 5px;
 }
 .sun-background{
-    background-image: url(https://drive.google.com/thumbnail?id=1lw8DNvMlj9rAfhSNz2yk4-5h4FZI6x7m);
+    background-image: url(https://drive.google.com/thumbnail?id=1hCFQtUZbbDyc4rGbWM8TdSYufX_s6DtC);
     background-size: cover;
     background-position-y: center;
+    padding-bottom: 50px;
 }
 .center-it{
     text-align: center;
@@ -72,13 +73,13 @@ h3{
     padding-top: 6px;
 }
 .degC, .degF{
-    color: #82DCFF;
-    border-color: #82DCFF;
+    color: #ffffff;
+    border-color: #ffffff;
 
 }
 .degF:hover,.degC:hover{
-    background-color: #82DCFF;
-    border-color: #82DCFF;
+    background-color: #ffffff;
+    border-color: #ffffff;
 }
 .footer{
     text-align: center;
