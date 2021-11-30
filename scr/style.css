@@ -6,7 +6,7 @@ h1{
     padding-left: 30px;
 }
 h2{
-    color: #ffffff;
+    color: #51718c;
     margin-top: 15px;
 }
 
@@ -18,10 +18,10 @@ h3{
     text-shadow: #F2E8DF 1px 0 10px;
 }
 .card-fill{
-    background: linear-gradient(#D9C9BA, #8C6151);
+    background: linear-gradient(#bad9d7, #51718c);
 }
 .search-icon{
-    color: #D9C9BA;
+    color: #51718c;
 }
 .search-btn{
     background: #ffffff;
@@ -43,7 +43,7 @@ h3{
     background: #ffffff;
     border-color: #ffffff;
     font-weight: bold;
-    color: #D9C9BA;
+    color: #51718c;
 }
 .container{
     max-width: 500px;
