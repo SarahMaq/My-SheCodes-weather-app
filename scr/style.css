@@ -55,12 +55,12 @@ h3{
 .degree{
     margin-top: 5px;
 }
-.sun-background{
+/* .sun-background{
     background-image: url(https://drive.google.com/thumbnail?id=1hCFQtUZbbDyc4rGbWM8TdSYufX_s6DtC);
     background-size: cover;
     background-position-y: center;
     padding-bottom: 50px;
-}
+} */
 .center-it{
     text-align: center;
 }
