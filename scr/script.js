@@ -22,9 +22,11 @@ currentDate.innerHTML = `${month + 1}/${date}/${year}`;
 function showTemp(response){
   document.querySelector("#city-name").innerHTML = response.data.name;
   document.querySelector(".condition").innerHTML = response.data.weather[0].description;
-  document.querySelector(".weather").innerHTML = Math.round(response.data.main.temp) +"°";
+  document.querySelector(".temperature").innerHTML = Math.round(response.data.main.temp) +"°";
   document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
   document.querySelector("#wind-speed").innerHTML = Math.round(response.data.wind.speed);
+  document.querySelector("#icon").setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
   
 }
 
