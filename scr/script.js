@@ -20,14 +20,17 @@ currentDate.innerHTML = `${month + 1}/${date}/${year}`;
 
 
 function showTemp(response){
+  
+  celsiusTemp = response.data.main.temp;
+  
   document.querySelector("#city-name").innerHTML = response.data.name;
   document.querySelector(".condition").innerHTML = response.data.weather[0].description;
-  document.querySelector(".temperature").innerHTML = Math.round(response.data.main.temp) +"°";
+  document.querySelector(".temperature").innerHTML = Math.round(celsiusTemp) +"°";
   document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
   document.querySelector("#wind-speed").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#icon").setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
-  
+
 }
 
 function search(city){
@@ -42,7 +45,6 @@ function handleSubmit(event){
   let city = document.querySelector("#search").value;
   search(city);
 }
-let searchCity = document.querySelector(".search-box").addEventListener("submit", handleSubmit);
 
 function currentCoords(position){
   let lat = position.coords.latitude;
@@ -58,23 +60,23 @@ function currentPosition(event){
   navigator.geolocation.getCurrentPosition(currentCoords);
 }
 
+function showFahrenheitTemp(event){
+  event.preventDefault();
+  let fahrenheitTemp = (celsiusTemp * 9)/ 5 + 32;
+  document.querySelector(".temperature").innerHTML = `${Math.round(fahrenheitTemp)}°`;
+}
+function showCelsiusTemp(event){
+  event.preventDefault();
+  document.querySelector(".temperature").innerHTML = `${Math.round(celsiusTemp)}°`;
+}
+
+let celsiusTemp = null;
+
+let searchCity = document.querySelector(".search-box").addEventListener("submit", handleSubmit);
 document.querySelector(".current").addEventListener("click", currentPosition);
 
+document.querySelector("#fahrenheit").addEventListener("click", showFahrenheitTemp);
+document.querySelector("#celsius").addEventListener("click", showCelsiusTemp);
+
+
 search("Milan");
-
-//
-// function tempDegreeF(){
-//   let h1 = document.querySelector(".weather");
-//   h1.innerHTML = "50°"; // change with search
-// }
-
-// function tempDegreeC(){
-//   let h1 = document.querySelector(".weather");
-//   h1.innerHTML = "20°"; // change with search
-// }
-
-// let tempF = document.querySelector("#fahrenheit");
-// let tempC = document.querySelector("#celsius");
-
-// tempF.addEventListener("click", tempDegreeF);
-// tempC.addEventListener("click", tempDegreeC);
