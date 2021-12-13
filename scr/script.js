@@ -17,7 +17,39 @@ dayName.innerHTML = day;
 let currentDate = document.querySelector("#date");
 currentDate.innerHTML = `${month + 1}/${date}/${year}`;
 
+function formatForecastDay(timeStamp){
+  let date = new Date(timeStamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+  return days[day];
+}
 
+function displayForecast(response){
+  let forecast = response.data.daily;
+  let forecastElement= document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+        
+  forecast.forEach(function(forecastDay, index) {
+      if(index < 6){
+        forecastHTML = forecastHTML +
+        `<div class="col center-it">
+            <div>
+                ${formatForecastDay(forecastDay.dt)}
+            </div>
+            <div><img src="http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png" class="forecast-icon"/>
+            </div>
+            <div>${Math.round(forecastDay.temp.min)}° - ${Math.round(forecastDay.temp.max)}°</div>
+        </div>`;}
+      });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML =  forecastHTML;
+}
+
+function getForecast(coordinates){
+  let apiKey = "bd5b4461863eddaa6ced0a0a67989e0a";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
 
 function showTemp(response){
   
@@ -30,6 +62,8 @@ function showTemp(response){
   document.querySelector("#wind-speed").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#icon").setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
   document.querySelector("#icon").setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
 
 }
 
@@ -69,6 +103,7 @@ function showCelsiusTemp(event){
   event.preventDefault();
   document.querySelector(".temperature").innerHTML = `${Math.round(celsiusTemp)}°`;
 }
+
 
 let celsiusTemp = null;
 

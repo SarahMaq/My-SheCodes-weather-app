@@ -16,7 +16,7 @@ h3{
     opacity: 80%;
     text-shadow: #F2E8DF 1px 0 10px;
 }
-img{
+.main-icon{
     width: 100px;
     margin-top: 10px;
 }
@@ -35,13 +35,9 @@ img{
 .search-bar{
     border: 1px solid #ffffff;
 }
-.next-days{
+.weather-forecast{
     color: white;
     margin-top: 50px;
-}
-.sunny{
-    color: #fffc5b;
-    text-shadow: #F2E8DF 1px 1px 10px;;
 }
 .current{
     background: #ffffff;
@@ -85,4 +81,7 @@ img{
 .fc{
     text-align: right;
     margin-top: 15px;
+}
+.forecast-icon{
+    width: 40px;
 }

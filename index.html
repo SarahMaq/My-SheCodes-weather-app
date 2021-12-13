@@ -37,8 +37,8 @@
                     <div class="col">
                         <div class="fc">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-outline-primary system-button degF" id="fahrenheit">°F</button>
-                            <button type="button" class="btn btn-outline-primary system-button degC" id="celsius">°C</button>
+                            <button type="button" class="btn btn-outline-primary system-button degF" id="fahrenheit"><strong>°F</strong></button>
+                            <button type="button" class="btn btn-outline-primary system-button degC" id="celsius"><strong>°C</strong></button>
                         </div>
                         <div class="hum">
                             <h3>Humidity: <span id="humidity">20</span>%</h3>
@@ -50,47 +50,9 @@
                 </div>
                 <div class="row">
                     <div class="col-7"><h1 class="temperature"></h1></div>
-                    <div class="col"><img src="" alt="" id="icon"></div>
+                    <div class="col"><img src="" alt="" id="icon" class="main-icon"></div>
                 </div>
-                        
-                        <div class="row next-days">
-                            <div class="col center-it">
-                                <div class="week-day01">
-                                    Sun
-                                </div>
-                                <div class="icon01"><i class="fas fa-sun sunny"></i>
-                                    <div class="temp01">30°</div>
-                                </div>
-                            </div>
-                            <div class="col center-it"><div class="week-day02">
-                                Mon
-                            </div>
-                            <div class="icon02"><i class="fas fa-sun sunny"></i>
-                                <div class="temp02">31°</div>
-                            </div>
-                        </div>
-                        <div class="col center-it"><div class="week-day03">
-                            Tue
-                        </div>
-                        <div class="icon03"><i class="fas fa-sun sunny"></i>
-                            <div class="temp03">29°</div>
-                </div>
-            </div>
-            <div class="col center-it"><div class="week-day04">
-                Wed
-            </div>
-            <div class="icon04"><i class="fas fa-sun sunny"></i>
-                <div class="temp04">30°</div>
-            </div>
-        </div>
-        <div class="col center-it"><div class="week-day05">
-            Thu
-        </div>
-        <div class="icon05"><i class="fas fa-sun sunny"></i>
-            <div class="temp05">30°</div>
-        </div>
-    </div>
-</div>
+                <div class="weather-forecast" id="forecast"></div>
 </div>
 </div>
 </div>
