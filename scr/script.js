@@ -53,11 +53,11 @@ function getForecast(coordinates){
 
 function showTemp(response){
   
-  celsiusTemp = response.data.main.temp;
+  // celsiusTemp = response.data.main.temp;
   
   document.querySelector("#city-name").innerHTML = response.data.name;
   document.querySelector(".condition").innerHTML = response.data.weather[0].description;
-  document.querySelector(".temperature").innerHTML = Math.round(celsiusTemp) +"°";
+  document.querySelector(".temperature").innerHTML = Math.round(response.data.main.temp) ;
   document.querySelector("#humidity").innerHTML = Math.round(response.data.main.humidity);
   document.querySelector("#wind-speed").innerHTML = Math.round(response.data.wind.speed);
   document.querySelector("#icon").setAttribute("src",`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
@@ -94,24 +94,24 @@ function currentPosition(event){
   navigator.geolocation.getCurrentPosition(currentCoords);
 }
 
-function showFahrenheitTemp(event){
-  event.preventDefault();
-  let fahrenheitTemp = (celsiusTemp * 9)/ 5 + 32;
-  document.querySelector(".temperature").innerHTML = `${Math.round(fahrenheitTemp)}°`;
-}
-function showCelsiusTemp(event){
-  event.preventDefault();
-  document.querySelector(".temperature").innerHTML = `${Math.round(celsiusTemp)}°`;
-}
+// function showFahrenheitTemp(event){
+//   event.preventDefault();
+//   let fahrenheitTemp = (celsiusTemp * 9)/ 5 + 32;
+//   document.querySelector(".temperature").innerHTML = `${Math.round(fahrenheitTemp)}°`;
+// }
+// function showCelsiusTemp(event){
+//   event.preventDefault();
+//   document.querySelector(".temperature").innerHTML = `${Math.round(celsiusTemp)}°`;
+// }
 
 
-let celsiusTemp = null;
+// let celsiusTemp = null;
 
 let searchCity = document.querySelector(".search-box").addEventListener("submit", handleSubmit);
 document.querySelector(".current").addEventListener("click", currentPosition);
 
-document.querySelector("#fahrenheit").addEventListener("click", showFahrenheitTemp);
-document.querySelector("#celsius").addEventListener("click", showCelsiusTemp);
+// document.querySelector("#fahrenheit").addEventListener("click", showFahrenheitTemp);
+// document.querySelector("#celsius").addEventListener("click", showCelsiusTemp);
 
 
 search("Milan");
